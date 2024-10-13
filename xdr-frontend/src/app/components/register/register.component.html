@@ -1,0 +1,22 @@
+<form (ngSubmit)="onSubmit()" class="register__form">
+  <h2 class="register__title">Register</h2>
+  <div class="register__form-group">
+    <label for="username">Username</label>
+    <input type="text" id="username" [(ngModel)]="username" name="username" required>
+  </div>
+
+  <div class="register__form-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" [(ngModel)]="password" name="password" required>
+  </div>
+
+  <div class="register__form-group">
+    <label for="confirmPassword">Confirm Password</label>
+    <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+  </div>
+
+  <div *ngIf="errorMessage" class="register__error-message">{{ errorMessage }}</div>
+  <div *ngIf="successMessage" class="register__success-message">{{ successMessage }}</div>
+
+  <button type="submit" class="register__button">Register</button>
+</form>

@@ -1,0 +1,66 @@
+@import '../../../assets/variables';
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login {
+  &__form {
+    background-color: $form-bg-color;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: $form-shadow;
+    text-align: center;
+    width: 300px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    color: $primary-text-color;
+  }
+
+  &__form-group {
+    margin-bottom: 10px;
+    text-align: left;
+
+    label {
+      display: block;
+      font-size: $font-size-small;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: $font-size-medium;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+  }
+
+  &__error-message {
+    color: red;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: $font-size-medium;
+    color: $white;
+    background-color: $primary-btn-color;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $hover-btn-color;
+    }
+  }
+}
